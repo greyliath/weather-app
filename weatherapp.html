@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/619bd79c8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="">Lisbon</a>
+        </li>
+        <li class="nav-item">
+          <a href="">Paris</a>
+        </li>
+        <li class="nav-item">
+          <a href="">Sydney</a>
+        </li>
+        <li class="nav-item">
+          <a href="">San Francisco</a>
+        </li>
+      </ul>
+      <form class="form-inline" id="weather-search">
+        <div class="form-group">
+          <input
+            name="searchTxt"
+            type="text"
+            class="form-control"
+            id="city-search"
+            aria-describedby="inputYourCity"
+            placeholder="Enter a city"
+          />
+          <button type="search" class="btn btn-primary">Search</button>
+          <button type="current" id="geolocation" class="btn btn-success">
+            Current
+          </button>
+        </div>
+      </form>
+      <div class="selected-weather-city">
+        <h1 id="current-city">Lisbon</h1>
+        <p id="current-time"></p>
+        <p id="description">Clear</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 current-temp">
+          <i class="fa-solid fa-sun fa-2xs>"></i>
+          <span class="current-temp" id="current-temp">23</span>
+          <span class="weather-unit" id="celsius"
+            ><a href="#">°C</a> |
+            <span id="fahrenheit"><a href="#">°F</a></span></span
+          >
+        </div>
+        <div class="col-sm-6">
+          Precipitation: 24%
+        </div>
+        <div class="col-sm-6 offset-6 wind">
+          Wind: 5km/h
+        </div>
+        <div class="row future-forecast">
+          <div class="col-md">
+            Wed <br />
+            <i class="fa-solid fa-cloud fa-2x"></i><br />
+            19°
+          </div>
+          <div class="col-md">
+            Thu
+            <i class="fa-solid fa-cloud-showers-heavy fa-2x"></i><br />
+            15°
+          </div>
+          <div class="col-md">
+            Fri
+            <i class="fa-solid fa-cloud fa-2x"></i><br />
+            14°
+          </div>
+          <div class="col-md">
+            Sat
+            <i class="fa-solid fa-cloud fa-2x"></i><br />
+            18°
+          </div>
+          <div class="col-md">
+            Sun
+            <i class="fa-solid fa-sun fa-2x"></i><br />
+            20°
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
